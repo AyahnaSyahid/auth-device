@@ -15,7 +15,7 @@ if (Test-Path $TPath1) {
 }
 
 # Prompt for passkey
-$inputPassKey = Read-Host "Enter Pass Key"
+$inputPassKey = Read-Host "PaskKey na naon?:"
 
 # Verify passkey
 if ($inputPassKey -eq $PassKey) {
@@ -27,13 +27,13 @@ if ($inputPassKey -eq $PassKey) {
 
         # Set FirstRunDate in registry
         Set-ItemProperty -Path $FoundPath -Name "FirstRunDate" -Value $newDate -ErrorAction Stop
-        Write-Host "FirstRunDate successfully set to $newDate"
+        Write-Host "Verifikasi berhasil, nuhun nya !!"
     } catch {
-        Write-Error "Failed to set registry value. Error: $($_.Exception.Message)"
-        Write-Error "Ensure you have permission to modify the registry and run PowerShell as Administrator."
+        Write-Error "Aduh sorry Error: $($_.Exception.Message)"
+        Write-Error "Kudu make Admin Previlege ngaeksekusina guys"
         exit 1
     }
 } else {
-    Write-Error "Invalid Pass Key"
+    Write-Error "Punten PassKey na lepat"
     exit 1
 }
