@@ -1,6 +1,6 @@
 # Define registry paths and passkey
-$TPath1 = "HKCU:\SOFTWARE\VB and VBA Program Settings\VBAScript\Settings\FirstRunDate"
-$TPath2 = "HKCU:\Software\VBAScript\FirstRunDate"
+$TPath1 = "HKCU:\SOFTWARE\VB and VBA Program Settings\VBAScript\Settings"
+$TPath2 = "HKCU:\Software\VBAScript"
 $FoundPath = ""
 $PassKey = "RizalKey"
 
